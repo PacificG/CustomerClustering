@@ -7,6 +7,7 @@ import matplotlib.cm as cm
 import numpy as np
 import argparse
 
+
 #custom code
 parser = argparse.ArgumentParser("kmeans parser")
 parser.add_argument("--cluster_sizes", nargs='+',  
@@ -120,4 +121,4 @@ for n_clusters in range_n_clusters:
         fontweight="bold",
     )
 
-plt.show()
+    plt.savefig(f"silhouette_analysis{n_clusters}.png", format="png")
